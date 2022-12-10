@@ -10,8 +10,6 @@ f.closed
 #print(len(read_data))
 
 spec = [20, 60, 100, 140, 180, 220]
-# specialCycles = [20, 60, 100, 140, 180, 220]
-# specialCycles = ['20', '60', '100', '140', '180', '220']
 
 signalStrengths = 0
 xValue = 1
@@ -32,26 +30,12 @@ for instr in instructions:
             signalStrengths += (xValue * cycles)
         xValue += int(instr.split()[1])
     line += 1
-    # match instr[:4]:
-    #     case 'noop':
-    #         cycles += 1
-    #         if cycles in spec:
-    #         # if cycles == 20 or cycles == 60 or cycles == 100 \
-    #         #     or cycles == 140 or cycles == 180 or cycles == 220:
-    #             signalStrengths += (xValue * cycles)
-    #     case 'addx':
-    #         cycles += 1
-    #         if cycles in spec:
-    #             signalStrengths += (xValue * cycles)
-    #         cycles += 1
-    #         if cycles in spec:
-    #             signalStrengths += (xValue * cycles)
-    #         xValue += int(instr.split()[1])
 
 print(signalStrengths)
 
 # Time of execution
 print('Duration: {}'.format(datetime.now() - start_time))
 
-# 12980 is too low.
-# Duration: 0:00:00.914970 / 0:00:00.835121
+## 12980 is too low. match wasn't working.
+# 13440
+# Duration: 0:00:00.000998
