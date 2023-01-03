@@ -1,10 +1,13 @@
 # https://adventofcode.com/2022/day/10
 # --- Day 10: Cathode-Ray Tube ---
+
+import os
+
 from datetime import datetime
 start_time = datetime.now()
 
 # Opening the file and reading it into a list.
-with open('workfile10', encoding="utf-8") as f:
+with open(os.path.join('input', 'workfile10'), encoding="utf-8") as f:
     instructions = f.read().splitlines()
 f.closed
 #print(len(read_data))
@@ -36,6 +39,6 @@ print(signalStrengths)
 # Time of execution
 print('Duration: {}'.format(datetime.now() - start_time))
 
-## 12980 is too low. match wasn't working.
+# 12980 is too low. match wasn't working.
 # 13440
 # Duration: 0:00:00.000998

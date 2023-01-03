@@ -1,10 +1,13 @@
 # https://adventofcode.com/2022/day/14
 # --- Day 14: Regolith Reservoir ---
+
+import os
+
 from datetime import datetime
 start_time = datetime.now()
 
 # Reading the file and splitting the lines into a list of lists.
-with open('C:\\Users\\edo-wg\\Documents\\AoC\\2022\\input\\workfile14', encoding="utf-8") as f:
+with open(os.path.join('input', 'workfile14'), encoding="utf-8") as f:
     scan = [[s for s in line.strip().split(" -> ")] for line in f]
 f.closed
 # print(len(scan))

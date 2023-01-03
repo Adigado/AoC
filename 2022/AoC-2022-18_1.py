@@ -2,11 +2,13 @@
 # --- Day 18: Boiling Boulders ---
 # Finally, 3-D.
 
+import os
+
 from datetime import datetime
 start_time = datetime.now()
 
 # # Reading the file and splitting the lines into a list of lists.
-with open('C:\\Users\\edo-wg\\Documents\\AoC\\2022\\input\\workfile18', encoding="utf-8") as f:
+with open(os.path.join('input', 'workfile18'), encoding="utf-8") as f:
     scan = [[int(s) for s in line.strip().split(",")] for line in f]
 f.closed
 # print(len(scan))

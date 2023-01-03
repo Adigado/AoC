@@ -1,10 +1,13 @@
 # https://adventofcode.com/2022/day/9
 # --- Day 9: Rope Bridge ---
+
+import os
+
 from datetime import datetime
 start_time = datetime.now()
 
 # Opening the file and reading it into a list.
-with open('workfile09', encoding="utf-8") as f:
+with open(os.path.join('input', 'workfile10'), encoding="utf-8") as f:
     seriesOfMotions = f.read().splitlines()
 f.closed
 #print(len(read_data))

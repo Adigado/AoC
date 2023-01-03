@@ -1,17 +1,21 @@
 # https://adventofcode.com/2022/day/11
 # --- Day 11: Monkey in the Middle ---
+
+import os
+
 from datetime import datetime
 start_time = datetime.now()
 
 import math
 
 # Reading the file and creating a list of lists.
-with open('workfile11', encoding="utf-8") as f:
+with open(os.path.join('input', 'workfile11'), encoding="utf-8") as f:
     notes = f.read().splitlines()
 f.closed
 #print(len(notes))
 
 monkeyBusiness = 0
+# monkeys = []
 items = []
 operations = []
 values = []
